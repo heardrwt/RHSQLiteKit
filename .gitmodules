@@ -1,0 +1,6 @@
+[submodule "RHSQLiteKit/Third Party/fmdb"]
+	path = RHSQLiteKit/Third Party/fmdb
+	url = git@github.com:heardrwt/fmdb.git
+[submodule "RHSQLiteKit/Third Party/RHDynamicPropertyObject"]
+	path = RHSQLiteKit/Third Party/RHDynamicPropertyObject
+	url = git@github.com:heardrwt/RHDynamicPropertyObject.git

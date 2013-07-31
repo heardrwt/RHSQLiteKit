@@ -1,0 +1,807 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		13CABC0E17A8AF240096EE76 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 13EEE38E17A8A89D00D3EA91 /* Foundation.framework */; };
+		13CABC2F17A8AF590096EE76 /* RHSQLiteDataStore.m in Sources */ = {isa = PBXBuildFile; fileRef = 13EEE28B17A7766500D3EA91 /* RHSQLiteDataStore.m */; };
+		13CABC3017A8AF590096EE76 /* RHSQLiteObject.m in Sources */ = {isa = PBXBuildFile; fileRef = 13EEE28F17A7766500D3EA91 /* RHSQLiteObject.m */; };
+		13CABC3117A8AF590096EE76 /* RHSQLiteObjectQuery.m in Sources */ = {isa = PBXBuildFile; fileRef = 13EEE29317A7766500D3EA91 /* RHSQLiteObjectQuery.m */; };
+		13CABC3217A8AF590096EE76 /* RHSQLiteDynamicObjectParent.m in Sources */ = {isa = PBXBuildFile; fileRef = 13EEE28D17A7766500D3EA91 /* RHSQLiteDynamicObjectParent.m */; };
+		13CABC3317A8AF590096EE76 /* RHSQLiteObjectPlaceholder.m in Sources */ = {isa = PBXBuildFile; fileRef = 13EEE29117A7766500D3EA91 /* RHSQLiteObjectPlaceholder.m */; };
+		13CABC3417A8AF590096EE76 /* FMDatabase.m in Sources */ = {isa = PBXBuildFile; fileRef = 13EEE37217A8A40F00D3EA91 /* FMDatabase.m */; };
+		13CABC3517A8AF590096EE76 /* FMDatabaseAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 13EEE37417A8A40F00D3EA91 /* FMDatabaseAdditions.m */; };
+		13CABC3617A8AF590096EE76 /* FMDatabasePool.m in Sources */ = {isa = PBXBuildFile; fileRef = 13EEE37617A8A40F00D3EA91 /* FMDatabasePool.m */; };
+		13CABC3717A8AF590096EE76 /* FMDatabaseQueue.m in Sources */ = {isa = PBXBuildFile; fileRef = 13EEE37817A8A40F00D3EA91 /* FMDatabaseQueue.m */; };
+		13CABC3817A8AF590096EE76 /* FMResultSet.m in Sources */ = {isa = PBXBuildFile; fileRef = 13EEE37C17A8A40F00D3EA91 /* FMResultSet.m */; };
+		13CABC3F17A8AF590096EE76 /* RHDynamicPropertyObject.m in Sources */ = {isa = PBXBuildFile; fileRef = 13EEE35F17A89EAA00D3EA91 /* RHDynamicPropertyObject.m */; };
+		13CABC5917A8AFA90096EE76 /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 13EEE26A17A773FE00D3EA91 /* XCTest.framework */; };
+		13CABC5F17A8AFA90096EE76 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 13CABC5D17A8AFA90096EE76 /* InfoPlist.strings */; };
+		13CABC6117A8AFA90096EE76 /* RHSQLiteKitTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 13CABC6017A8AFA90096EE76 /* RHSQLiteKitTests.m */; };
+		13CABC6917A8B2DF0096EE76 /* RHSQLiteKit.h in Headers */ = {isa = PBXBuildFile; fileRef = 13EEE26217A773FE00D3EA91 /* RHSQLiteKit.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		13CABC6A17A8B2DF0096EE76 /* RHSQLiteDataStore.h in Headers */ = {isa = PBXBuildFile; fileRef = 13EEE28A17A7766500D3EA91 /* RHSQLiteDataStore.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		13CABC6B17A8B2DF0096EE76 /* RHSQLiteObject.h in Headers */ = {isa = PBXBuildFile; fileRef = 13EEE28E17A7766500D3EA91 /* RHSQLiteObject.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		13CABC6C17A8B2DF0096EE76 /* RHSQLiteObjectQuery.h in Headers */ = {isa = PBXBuildFile; fileRef = 13EEE29217A7766500D3EA91 /* RHSQLiteObjectQuery.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		13CABC6D17A8B2DF0096EE76 /* RHSQLiteDataStore_Private.h in Headers */ = {isa = PBXBuildFile; fileRef = 13EEE28917A7766500D3EA91 /* RHSQLiteDataStore_Private.h */; settings = {ATTRIBUTES = (Private, ); }; };
+		13CABC6E17A8B2DF0096EE76 /* RHSQLiteDynamicObjectParent.h in Headers */ = {isa = PBXBuildFile; fileRef = 13EEE28C17A7766500D3EA91 /* RHSQLiteDynamicObjectParent.h */; settings = {ATTRIBUTES = (Private, ); }; };
+		13CABC6F17A8B2DF0096EE76 /* RHSQLiteObjectPlaceholder.h in Headers */ = {isa = PBXBuildFile; fileRef = 13EEE29017A7766500D3EA91 /* RHSQLiteObjectPlaceholder.h */; settings = {ATTRIBUTES = (Private, ); }; };
+		13CABC7017A8B2DF0096EE76 /* FMDatabase.h in Headers */ = {isa = PBXBuildFile; fileRef = 13EEE37117A8A40F00D3EA91 /* FMDatabase.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		13CABC7117A8B2DF0096EE76 /* FMDatabaseAdditions.h in Headers */ = {isa = PBXBuildFile; fileRef = 13EEE37317A8A40F00D3EA91 /* FMDatabaseAdditions.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		13CABC7217A8B2DF0096EE76 /* FMDatabasePool.h in Headers */ = {isa = PBXBuildFile; fileRef = 13EEE37517A8A40F00D3EA91 /* FMDatabasePool.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		13CABC7317A8B2DF0096EE76 /* FMDatabaseQueue.h in Headers */ = {isa = PBXBuildFile; fileRef = 13EEE37717A8A40F00D3EA91 /* FMDatabaseQueue.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		13CABC7417A8B2DF0096EE76 /* FMResultSet.h in Headers */ = {isa = PBXBuildFile; fileRef = 13EEE37B17A8A40F00D3EA91 /* FMResultSet.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		13CABC7C17A8B2DF0096EE76 /* RHDynamicPropertyObject.h in Headers */ = {isa = PBXBuildFile; fileRef = 13EEE35E17A89EAA00D3EA91 /* RHDynamicPropertyObject.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		13EEE29417A7766500D3EA91 /* RHSQLiteDataStore_Private.h in Headers */ = {isa = PBXBuildFile; fileRef = 13EEE28917A7766500D3EA91 /* RHSQLiteDataStore_Private.h */; settings = {ATTRIBUTES = (Private, ); }; };
+		13EEE29517A7766500D3EA91 /* RHSQLiteDataStore.h in Headers */ = {isa = PBXBuildFile; fileRef = 13EEE28A17A7766500D3EA91 /* RHSQLiteDataStore.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		13EEE29617A7766500D3EA91 /* RHSQLiteDataStore.m in Sources */ = {isa = PBXBuildFile; fileRef = 13EEE28B17A7766500D3EA91 /* RHSQLiteDataStore.m */; };
+		13EEE29717A7766500D3EA91 /* RHSQLiteDynamicObjectParent.h in Headers */ = {isa = PBXBuildFile; fileRef = 13EEE28C17A7766500D3EA91 /* RHSQLiteDynamicObjectParent.h */; settings = {ATTRIBUTES = (Private, ); }; };
+		13EEE29817A7766500D3EA91 /* RHSQLiteDynamicObjectParent.m in Sources */ = {isa = PBXBuildFile; fileRef = 13EEE28D17A7766500D3EA91 /* RHSQLiteDynamicObjectParent.m */; };
+		13EEE29917A7766500D3EA91 /* RHSQLiteObject.h in Headers */ = {isa = PBXBuildFile; fileRef = 13EEE28E17A7766500D3EA91 /* RHSQLiteObject.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		13EEE29A17A7766500D3EA91 /* RHSQLiteObject.m in Sources */ = {isa = PBXBuildFile; fileRef = 13EEE28F17A7766500D3EA91 /* RHSQLiteObject.m */; };
+		13EEE29B17A7766500D3EA91 /* RHSQLiteObjectPlaceholder.h in Headers */ = {isa = PBXBuildFile; fileRef = 13EEE29017A7766500D3EA91 /* RHSQLiteObjectPlaceholder.h */; settings = {ATTRIBUTES = (Private, ); }; };
+		13EEE29C17A7766500D3EA91 /* RHSQLiteObjectPlaceholder.m in Sources */ = {isa = PBXBuildFile; fileRef = 13EEE29117A7766500D3EA91 /* RHSQLiteObjectPlaceholder.m */; };
+		13EEE29D17A7766500D3EA91 /* RHSQLiteObjectQuery.h in Headers */ = {isa = PBXBuildFile; fileRef = 13EEE29217A7766500D3EA91 /* RHSQLiteObjectQuery.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		13EEE29E17A7766500D3EA91 /* RHSQLiteObjectQuery.m in Sources */ = {isa = PBXBuildFile; fileRef = 13EEE29317A7766500D3EA91 /* RHSQLiteObjectQuery.m */; };
+		13EEE36317A89EAA00D3EA91 /* RHDynamicPropertyObject.h in Headers */ = {isa = PBXBuildFile; fileRef = 13EEE35E17A89EAA00D3EA91 /* RHDynamicPropertyObject.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		13EEE36417A89EAA00D3EA91 /* RHDynamicPropertyObject.m in Sources */ = {isa = PBXBuildFile; fileRef = 13EEE35F17A89EAA00D3EA91 /* RHDynamicPropertyObject.m */; };
+		13EEE36B17A8A12A00D3EA91 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 13EEE25817A773FD00D3EA91 /* Foundation.framework */; };
+		13EEE36D17A8A28200D3EA91 /* libsqlite3.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 13EEE36C17A8A28200D3EA91 /* libsqlite3.dylib */; };
+		13EEE36F17A8A34100D3EA91 /* RHSQLiteKit.h in Headers */ = {isa = PBXBuildFile; fileRef = 13EEE26217A773FE00D3EA91 /* RHSQLiteKit.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		13EEE37D17A8A40F00D3EA91 /* FMDatabase.h in Headers */ = {isa = PBXBuildFile; fileRef = 13EEE37117A8A40F00D3EA91 /* FMDatabase.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		13EEE37E17A8A40F00D3EA91 /* FMDatabase.m in Sources */ = {isa = PBXBuildFile; fileRef = 13EEE37217A8A40F00D3EA91 /* FMDatabase.m */; };
+		13EEE37F17A8A40F00D3EA91 /* FMDatabaseAdditions.h in Headers */ = {isa = PBXBuildFile; fileRef = 13EEE37317A8A40F00D3EA91 /* FMDatabaseAdditions.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		13EEE38017A8A40F00D3EA91 /* FMDatabaseAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 13EEE37417A8A40F00D3EA91 /* FMDatabaseAdditions.m */; };
+		13EEE38117A8A40F00D3EA91 /* FMDatabasePool.h in Headers */ = {isa = PBXBuildFile; fileRef = 13EEE37517A8A40F00D3EA91 /* FMDatabasePool.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		13EEE38217A8A40F00D3EA91 /* FMDatabasePool.m in Sources */ = {isa = PBXBuildFile; fileRef = 13EEE37617A8A40F00D3EA91 /* FMDatabasePool.m */; };
+		13EEE38317A8A40F00D3EA91 /* FMDatabaseQueue.h in Headers */ = {isa = PBXBuildFile; fileRef = 13EEE37717A8A40F00D3EA91 /* FMDatabaseQueue.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		13EEE38417A8A40F00D3EA91 /* FMDatabaseQueue.m in Sources */ = {isa = PBXBuildFile; fileRef = 13EEE37817A8A40F00D3EA91 /* FMDatabaseQueue.m */; };
+		13EEE38717A8A40F00D3EA91 /* FMResultSet.h in Headers */ = {isa = PBXBuildFile; fileRef = 13EEE37B17A8A40F00D3EA91 /* FMResultSet.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		13EEE38817A8A40F00D3EA91 /* FMResultSet.m in Sources */ = {isa = PBXBuildFile; fileRef = 13EEE37C17A8A40F00D3EA91 /* FMResultSet.m */; };
+		13FE48E917A9B6A8003C687E /* NSArray+RHNumberAdditions.h in Headers */ = {isa = PBXBuildFile; fileRef = 13FE48DE17A9B6A8003C687E /* NSArray+RHNumberAdditions.h */; };
+		13FE48EA17A9B6A8003C687E /* NSArray+RHNumberAdditions.h in Headers */ = {isa = PBXBuildFile; fileRef = 13FE48DE17A9B6A8003C687E /* NSArray+RHNumberAdditions.h */; };
+		13FE48EB17A9B6A8003C687E /* NSArray+RHNumberAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 13FE48DF17A9B6A8003C687E /* NSArray+RHNumberAdditions.m */; };
+		13FE48EC17A9B6A8003C687E /* NSArray+RHNumberAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 13FE48DF17A9B6A8003C687E /* NSArray+RHNumberAdditions.m */; };
+		13FE48ED17A9B6A8003C687E /* NSString+RHCaseAdditions.h in Headers */ = {isa = PBXBuildFile; fileRef = 13FE48E017A9B6A8003C687E /* NSString+RHCaseAdditions.h */; };
+		13FE48EE17A9B6A8003C687E /* NSString+RHCaseAdditions.h in Headers */ = {isa = PBXBuildFile; fileRef = 13FE48E017A9B6A8003C687E /* NSString+RHCaseAdditions.h */; };
+		13FE48EF17A9B6A8003C687E /* NSString+RHCaseAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 13FE48E117A9B6A8003C687E /* NSString+RHCaseAdditions.m */; };
+		13FE48F017A9B6A8003C687E /* NSString+RHCaseAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 13FE48E117A9B6A8003C687E /* NSString+RHCaseAdditions.m */; };
+		13FE48F117A9B6A8003C687E /* NSString+RHNumberAdditions.h in Headers */ = {isa = PBXBuildFile; fileRef = 13FE48E217A9B6A8003C687E /* NSString+RHNumberAdditions.h */; };
+		13FE48F217A9B6A8003C687E /* NSString+RHNumberAdditions.h in Headers */ = {isa = PBXBuildFile; fileRef = 13FE48E217A9B6A8003C687E /* NSString+RHNumberAdditions.h */; };
+		13FE48F317A9B6A8003C687E /* NSString+RHNumberAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 13FE48E317A9B6A8003C687E /* NSString+RHNumberAdditions.m */; };
+		13FE48F417A9B6A8003C687E /* NSString+RHNumberAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 13FE48E317A9B6A8003C687E /* NSString+RHNumberAdditions.m */; };
+		13FE48F517A9B6A8003C687E /* RHARCSupport.h in Headers */ = {isa = PBXBuildFile; fileRef = 13FE48E417A9B6A8003C687E /* RHARCSupport.h */; };
+		13FE48F617A9B6A8003C687E /* RHARCSupport.h in Headers */ = {isa = PBXBuildFile; fileRef = 13FE48E417A9B6A8003C687E /* RHARCSupport.h */; };
+		13FE48F717A9B6A8003C687E /* RHLoggingSupport.h in Headers */ = {isa = PBXBuildFile; fileRef = 13FE48E517A9B6A8003C687E /* RHLoggingSupport.h */; };
+		13FE48F817A9B6A8003C687E /* RHLoggingSupport.h in Headers */ = {isa = PBXBuildFile; fileRef = 13FE48E517A9B6A8003C687E /* RHLoggingSupport.h */; };
+		13FE48F917A9B6A8003C687E /* RHLoggingSupport.m in Sources */ = {isa = PBXBuildFile; fileRef = 13FE48E617A9B6A8003C687E /* RHLoggingSupport.m */; };
+		13FE48FA17A9B6A8003C687E /* RHLoggingSupport.m in Sources */ = {isa = PBXBuildFile; fileRef = 13FE48E617A9B6A8003C687E /* RHLoggingSupport.m */; };
+		13FE48FB17A9B6A8003C687E /* RHWeakValue.h in Headers */ = {isa = PBXBuildFile; fileRef = 13FE48E717A9B6A8003C687E /* RHWeakValue.h */; };
+		13FE48FC17A9B6A8003C687E /* RHWeakValue.h in Headers */ = {isa = PBXBuildFile; fileRef = 13FE48E717A9B6A8003C687E /* RHWeakValue.h */; };
+		13FE48FD17A9B6A8003C687E /* RHWeakValue.m in Sources */ = {isa = PBXBuildFile; fileRef = 13FE48E817A9B6A8003C687E /* RHWeakValue.m */; };
+		13FE48FE17A9B6A8003C687E /* RHWeakValue.m in Sources */ = {isa = PBXBuildFile; fileRef = 13FE48E817A9B6A8003C687E /* RHWeakValue.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		13CABC6317A8AFA90096EE76 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 13EEE24917A773FD00D3EA91 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 13EEE25117A773FD00D3EA91;
+			remoteInfo = RHSQLiteKit;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		13CABBE517A8AB970096EE76 /* libsqlite3.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libsqlite3.dylib; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS7.0.sdk/usr/lib/libsqlite3.dylib; sourceTree = DEVELOPER_DIR; };
+		13CABC0D17A8AF230096EE76 /* liblibRHSQLite.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = liblibRHSQLite.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		13CABC5817A8AFA90096EE76 /* RHSQLiteKitTests.xctest */ = {isa = PBXFileReference; explicitFileType = folder; includeInIndex = 0; path = RHSQLiteKitTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		13CABC5C17A8AFA90096EE76 /* RHSQLiteKitTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "RHSQLiteKitTests-Info.plist"; sourceTree = "<group>"; };
+		13CABC5E17A8AFA90096EE76 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		13CABC6017A8AFA90096EE76 /* RHSQLiteKitTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RHSQLiteKitTests.m; sourceTree = "<group>"; };
+		13CABC6217A8AFA90096EE76 /* RHSQLiteKitTests-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "RHSQLiteKitTests-Prefix.pch"; sourceTree = "<group>"; };
+		13EEE25217A773FD00D3EA91 /* RHSQLiteKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = RHSQLiteKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		13EEE25517A773FD00D3EA91 /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = System/Library/Frameworks/Cocoa.framework; sourceTree = SDKROOT; };
+		13EEE25817A773FD00D3EA91 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		13EEE25917A773FD00D3EA91 /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
+		13EEE25A17A773FD00D3EA91 /* AppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppKit.framework; path = System/Library/Frameworks/AppKit.framework; sourceTree = SDKROOT; };
+		13EEE25D17A773FD00D3EA91 /* RHSQLiteKit-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "RHSQLiteKit-Info.plist"; sourceTree = "<group>"; };
+		13EEE26117A773FE00D3EA91 /* RHSQLiteKit-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "RHSQLiteKit-Prefix.pch"; sourceTree = "<group>"; };
+		13EEE26217A773FE00D3EA91 /* RHSQLiteKit.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RHSQLiteKit.h; sourceTree = "<group>"; };
+		13EEE26A17A773FE00D3EA91 /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
+		13EEE28917A7766500D3EA91 /* RHSQLiteDataStore_Private.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RHSQLiteDataStore_Private.h; sourceTree = "<group>"; };
+		13EEE28A17A7766500D3EA91 /* RHSQLiteDataStore.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RHSQLiteDataStore.h; sourceTree = "<group>"; };
+		13EEE28B17A7766500D3EA91 /* RHSQLiteDataStore.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RHSQLiteDataStore.m; sourceTree = "<group>"; };
+		13EEE28C17A7766500D3EA91 /* RHSQLiteDynamicObjectParent.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RHSQLiteDynamicObjectParent.h; sourceTree = "<group>"; };
+		13EEE28D17A7766500D3EA91 /* RHSQLiteDynamicObjectParent.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RHSQLiteDynamicObjectParent.m; sourceTree = "<group>"; };
+		13EEE28E17A7766500D3EA91 /* RHSQLiteObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RHSQLiteObject.h; sourceTree = "<group>"; };
+		13EEE28F17A7766500D3EA91 /* RHSQLiteObject.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RHSQLiteObject.m; sourceTree = "<group>"; };
+		13EEE29017A7766500D3EA91 /* RHSQLiteObjectPlaceholder.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RHSQLiteObjectPlaceholder.h; sourceTree = "<group>"; };
+		13EEE29117A7766500D3EA91 /* RHSQLiteObjectPlaceholder.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RHSQLiteObjectPlaceholder.m; sourceTree = "<group>"; };
+		13EEE29217A7766500D3EA91 /* RHSQLiteObjectQuery.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RHSQLiteObjectQuery.h; sourceTree = "<group>"; };
+		13EEE29317A7766500D3EA91 /* RHSQLiteObjectQuery.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RHSQLiteObjectQuery.m; sourceTree = "<group>"; };
+		13EEE35E17A89EAA00D3EA91 /* RHDynamicPropertyObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RHDynamicPropertyObject.h; sourceTree = "<group>"; };
+		13EEE35F17A89EAA00D3EA91 /* RHDynamicPropertyObject.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RHDynamicPropertyObject.m; sourceTree = "<group>"; };
+		13EEE36C17A8A28200D3EA91 /* libsqlite3.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libsqlite3.dylib; path = usr/lib/libsqlite3.dylib; sourceTree = SDKROOT; };
+		13EEE37117A8A40F00D3EA91 /* FMDatabase.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FMDatabase.h; sourceTree = "<group>"; };
+		13EEE37217A8A40F00D3EA91 /* FMDatabase.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FMDatabase.m; sourceTree = "<group>"; };
+		13EEE37317A8A40F00D3EA91 /* FMDatabaseAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FMDatabaseAdditions.h; sourceTree = "<group>"; };
+		13EEE37417A8A40F00D3EA91 /* FMDatabaseAdditions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FMDatabaseAdditions.m; sourceTree = "<group>"; };
+		13EEE37517A8A40F00D3EA91 /* FMDatabasePool.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FMDatabasePool.h; sourceTree = "<group>"; };
+		13EEE37617A8A40F00D3EA91 /* FMDatabasePool.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FMDatabasePool.m; sourceTree = "<group>"; };
+		13EEE37717A8A40F00D3EA91 /* FMDatabaseQueue.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FMDatabaseQueue.h; sourceTree = "<group>"; };
+		13EEE37817A8A40F00D3EA91 /* FMDatabaseQueue.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FMDatabaseQueue.m; sourceTree = "<group>"; };
+		13EEE37B17A8A40F00D3EA91 /* FMResultSet.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FMResultSet.h; sourceTree = "<group>"; };
+		13EEE37C17A8A40F00D3EA91 /* FMResultSet.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FMResultSet.m; sourceTree = "<group>"; };
+		13EEE38E17A8A89D00D3EA91 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		13EEE39E17A8A89E00D3EA91 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = Library/Frameworks/UIKit.framework; sourceTree = DEVELOPER_DIR; };
+		13FE48DE17A9B6A8003C687E /* NSArray+RHNumberAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSArray+RHNumberAdditions.h"; sourceTree = "<group>"; };
+		13FE48DF17A9B6A8003C687E /* NSArray+RHNumberAdditions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSArray+RHNumberAdditions.m"; sourceTree = "<group>"; };
+		13FE48E017A9B6A8003C687E /* NSString+RHCaseAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+RHCaseAdditions.h"; sourceTree = "<group>"; };
+		13FE48E117A9B6A8003C687E /* NSString+RHCaseAdditions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+RHCaseAdditions.m"; sourceTree = "<group>"; };
+		13FE48E217A9B6A8003C687E /* NSString+RHNumberAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+RHNumberAdditions.h"; sourceTree = "<group>"; };
+		13FE48E317A9B6A8003C687E /* NSString+RHNumberAdditions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+RHNumberAdditions.m"; sourceTree = "<group>"; };
+		13FE48E417A9B6A8003C687E /* RHARCSupport.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RHARCSupport.h; sourceTree = "<group>"; };
+		13FE48E517A9B6A8003C687E /* RHLoggingSupport.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RHLoggingSupport.h; sourceTree = "<group>"; };
+		13FE48E617A9B6A8003C687E /* RHLoggingSupport.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RHLoggingSupport.m; sourceTree = "<group>"; };
+		13FE48E717A9B6A8003C687E /* RHWeakValue.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = RHWeakValue.h; path = Additions/RHWeakValue.h; sourceTree = "<group>"; };
+		13FE48E817A9B6A8003C687E /* RHWeakValue.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = RHWeakValue.m; path = Additions/RHWeakValue.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		13CABC0A17A8AF230096EE76 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				13CABC0E17A8AF240096EE76 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		13CABC5517A8AFA90096EE76 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				13CABC5917A8AFA90096EE76 /* XCTest.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		13EEE24E17A773FD00D3EA91 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				13EEE36D17A8A28200D3EA91 /* libsqlite3.dylib in Frameworks */,
+				13EEE36B17A8A12A00D3EA91 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		13CABC5A17A8AFA90096EE76 /* RHSQLiteKitTests */ = {
+			isa = PBXGroup;
+			children = (
+				13CABC6017A8AFA90096EE76 /* RHSQLiteKitTests.m */,
+				13CABC5B17A8AFA90096EE76 /* Supporting Files */,
+			);
+			path = RHSQLiteKitTests;
+			sourceTree = "<group>";
+		};
+		13CABC5B17A8AFA90096EE76 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				13CABC5C17A8AFA90096EE76 /* RHSQLiteKitTests-Info.plist */,
+				13CABC5D17A8AFA90096EE76 /* InfoPlist.strings */,
+				13CABC6217A8AFA90096EE76 /* RHSQLiteKitTests-Prefix.pch */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		13EEE24817A773FD00D3EA91 = {
+			isa = PBXGroup;
+			children = (
+				13EEE25B17A773FD00D3EA91 /* RHSQLiteKit */,
+				13CABC5A17A8AFA90096EE76 /* RHSQLiteKitTests */,
+				13EEE25417A773FD00D3EA91 /* Frameworks */,
+				13EEE25317A773FD00D3EA91 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		13EEE25317A773FD00D3EA91 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				13EEE25217A773FD00D3EA91 /* RHSQLiteKit.framework */,
+				13CABC0D17A8AF230096EE76 /* liblibRHSQLite.a */,
+				13CABC5817A8AFA90096EE76 /* RHSQLiteKitTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		13EEE25417A773FD00D3EA91 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				13CABBE517A8AB970096EE76 /* libsqlite3.dylib */,
+				13EEE36C17A8A28200D3EA91 /* libsqlite3.dylib */,
+				13EEE25517A773FD00D3EA91 /* Cocoa.framework */,
+				13EEE26A17A773FE00D3EA91 /* XCTest.framework */,
+				13EEE38E17A8A89D00D3EA91 /* Foundation.framework */,
+				13EEE39E17A8A89E00D3EA91 /* UIKit.framework */,
+				13EEE25717A773FD00D3EA91 /* Other Frameworks */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		13EEE25717A773FD00D3EA91 /* Other Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				13EEE25817A773FD00D3EA91 /* Foundation.framework */,
+				13EEE25917A773FD00D3EA91 /* CoreData.framework */,
+				13EEE25A17A773FD00D3EA91 /* AppKit.framework */,
+			);
+			name = "Other Frameworks";
+			sourceTree = "<group>";
+		};
+		13EEE25B17A773FD00D3EA91 /* RHSQLiteKit */ = {
+			isa = PBXGroup;
+			children = (
+				13EEE26217A773FE00D3EA91 /* RHSQLiteKit.h */,
+				13EEE28A17A7766500D3EA91 /* RHSQLiteDataStore.h */,
+				13EEE28B17A7766500D3EA91 /* RHSQLiteDataStore.m */,
+				13EEE28E17A7766500D3EA91 /* RHSQLiteObject.h */,
+				13EEE28F17A7766500D3EA91 /* RHSQLiteObject.m */,
+				13EEE29217A7766500D3EA91 /* RHSQLiteObjectQuery.h */,
+				13EEE29317A7766500D3EA91 /* RHSQLiteObjectQuery.m */,
+				13EEE29F17A7766B00D3EA91 /* Private */,
+				13FE48DD17A9B67F003C687E /* Additions */,
+				13EEE2C017A7A39900D3EA91 /* Third Party */,
+				13EEE25C17A773FD00D3EA91 /* Supporting Files */,
+			);
+			path = RHSQLiteKit;
+			sourceTree = "<group>";
+		};
+		13EEE25C17A773FD00D3EA91 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				13EEE25D17A773FD00D3EA91 /* RHSQLiteKit-Info.plist */,
+				13EEE26117A773FE00D3EA91 /* RHSQLiteKit-Prefix.pch */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		13EEE29F17A7766B00D3EA91 /* Private */ = {
+			isa = PBXGroup;
+			children = (
+				13EEE28917A7766500D3EA91 /* RHSQLiteDataStore_Private.h */,
+				13EEE28C17A7766500D3EA91 /* RHSQLiteDynamicObjectParent.h */,
+				13EEE28D17A7766500D3EA91 /* RHSQLiteDynamicObjectParent.m */,
+				13EEE29017A7766500D3EA91 /* RHSQLiteObjectPlaceholder.h */,
+				13EEE29117A7766500D3EA91 /* RHSQLiteObjectPlaceholder.m */,
+				13FE48E717A9B6A8003C687E /* RHWeakValue.h */,
+				13FE48E817A9B6A8003C687E /* RHWeakValue.m */,
+			);
+			name = Private;
+			sourceTree = "<group>";
+		};
+		13EEE2C017A7A39900D3EA91 /* Third Party */ = {
+			isa = PBXGroup;
+			children = (
+				13EEE37017A8A40F00D3EA91 /* FMDB */,
+				13EEE35B17A89EAA00D3EA91 /* RHDynamicPropertyObject */,
+			);
+			path = "Third Party";
+			sourceTree = "<group>";
+		};
+		13EEE35B17A89EAA00D3EA91 /* RHDynamicPropertyObject */ = {
+			isa = PBXGroup;
+			children = (
+				13EEE35E17A89EAA00D3EA91 /* RHDynamicPropertyObject.h */,
+				13EEE35F17A89EAA00D3EA91 /* RHDynamicPropertyObject.m */,
+			);
+			path = RHDynamicPropertyObject;
+			sourceTree = "<group>";
+		};
+		13EEE37017A8A40F00D3EA91 /* FMDB */ = {
+			isa = PBXGroup;
+			children = (
+				13EEE37117A8A40F00D3EA91 /* FMDatabase.h */,
+				13EEE37217A8A40F00D3EA91 /* FMDatabase.m */,
+				13EEE37317A8A40F00D3EA91 /* FMDatabaseAdditions.h */,
+				13EEE37417A8A40F00D3EA91 /* FMDatabaseAdditions.m */,
+				13EEE37517A8A40F00D3EA91 /* FMDatabasePool.h */,
+				13EEE37617A8A40F00D3EA91 /* FMDatabasePool.m */,
+				13EEE37717A8A40F00D3EA91 /* FMDatabaseQueue.h */,
+				13EEE37817A8A40F00D3EA91 /* FMDatabaseQueue.m */,
+				13EEE37B17A8A40F00D3EA91 /* FMResultSet.h */,
+				13EEE37C17A8A40F00D3EA91 /* FMResultSet.m */,
+			);
+			name = FMDB;
+			path = fmdb/src;
+			sourceTree = "<group>";
+		};
+		13FE48DD17A9B67F003C687E /* Additions */ = {
+			isa = PBXGroup;
+			children = (
+				13FE48E417A9B6A8003C687E /* RHARCSupport.h */,
+				13FE48E517A9B6A8003C687E /* RHLoggingSupport.h */,
+				13FE48E617A9B6A8003C687E /* RHLoggingSupport.m */,
+				13FE48DE17A9B6A8003C687E /* NSArray+RHNumberAdditions.h */,
+				13FE48DF17A9B6A8003C687E /* NSArray+RHNumberAdditions.m */,
+				13FE48E017A9B6A8003C687E /* NSString+RHCaseAdditions.h */,
+				13FE48E117A9B6A8003C687E /* NSString+RHCaseAdditions.m */,
+				13FE48E217A9B6A8003C687E /* NSString+RHNumberAdditions.h */,
+				13FE48E317A9B6A8003C687E /* NSString+RHNumberAdditions.m */,
+			);
+			path = Additions;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXHeadersBuildPhase section */
+		13CABC6817A8B2B90096EE76 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				13CABC6917A8B2DF0096EE76 /* RHSQLiteKit.h in Headers */,
+				13CABC6A17A8B2DF0096EE76 /* RHSQLiteDataStore.h in Headers */,
+				13CABC6B17A8B2DF0096EE76 /* RHSQLiteObject.h in Headers */,
+				13CABC6C17A8B2DF0096EE76 /* RHSQLiteObjectQuery.h in Headers */,
+				13CABC7C17A8B2DF0096EE76 /* RHDynamicPropertyObject.h in Headers */,
+				13CABC7017A8B2DF0096EE76 /* FMDatabase.h in Headers */,
+				13CABC7117A8B2DF0096EE76 /* FMDatabaseAdditions.h in Headers */,
+				13FE48F217A9B6A8003C687E /* NSString+RHNumberAdditions.h in Headers */,
+				13CABC7217A8B2DF0096EE76 /* FMDatabasePool.h in Headers */,
+				13CABC7317A8B2DF0096EE76 /* FMDatabaseQueue.h in Headers */,
+				13FE48F817A9B6A8003C687E /* RHLoggingSupport.h in Headers */,
+				13CABC7417A8B2DF0096EE76 /* FMResultSet.h in Headers */,
+				13FE48EE17A9B6A8003C687E /* NSString+RHCaseAdditions.h in Headers */,
+				13FE48EA17A9B6A8003C687E /* NSArray+RHNumberAdditions.h in Headers */,
+				13CABC6D17A8B2DF0096EE76 /* RHSQLiteDataStore_Private.h in Headers */,
+				13CABC6F17A8B2DF0096EE76 /* RHSQLiteObjectPlaceholder.h in Headers */,
+				13CABC6E17A8B2DF0096EE76 /* RHSQLiteDynamicObjectParent.h in Headers */,
+				13FE48FC17A9B6A8003C687E /* RHWeakValue.h in Headers */,
+				13FE48F617A9B6A8003C687E /* RHARCSupport.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		13EEE24F17A773FD00D3EA91 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				13EEE36F17A8A34100D3EA91 /* RHSQLiteKit.h in Headers */,
+				13EEE29917A7766500D3EA91 /* RHSQLiteObject.h in Headers */,
+				13EEE29517A7766500D3EA91 /* RHSQLiteDataStore.h in Headers */,
+				13EEE29D17A7766500D3EA91 /* RHSQLiteObjectQuery.h in Headers */,
+				13EEE36317A89EAA00D3EA91 /* RHDynamicPropertyObject.h in Headers */,
+				13EEE38317A8A40F00D3EA91 /* FMDatabaseQueue.h in Headers */,
+				13EEE37D17A8A40F00D3EA91 /* FMDatabase.h in Headers */,
+				13FE48F117A9B6A8003C687E /* NSString+RHNumberAdditions.h in Headers */,
+				13EEE38717A8A40F00D3EA91 /* FMResultSet.h in Headers */,
+				13EEE38117A8A40F00D3EA91 /* FMDatabasePool.h in Headers */,
+				13FE48F717A9B6A8003C687E /* RHLoggingSupport.h in Headers */,
+				13EEE37F17A8A40F00D3EA91 /* FMDatabaseAdditions.h in Headers */,
+				13FE48ED17A9B6A8003C687E /* NSString+RHCaseAdditions.h in Headers */,
+				13FE48E917A9B6A8003C687E /* NSArray+RHNumberAdditions.h in Headers */,
+				13EEE29417A7766500D3EA91 /* RHSQLiteDataStore_Private.h in Headers */,
+				13EEE29B17A7766500D3EA91 /* RHSQLiteObjectPlaceholder.h in Headers */,
+				13EEE29717A7766500D3EA91 /* RHSQLiteDynamicObjectParent.h in Headers */,
+				13FE48FB17A9B6A8003C687E /* RHWeakValue.h in Headers */,
+				13FE48F517A9B6A8003C687E /* RHARCSupport.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
+
+/* Begin PBXNativeTarget section */
+		13CABC0C17A8AF230096EE76 /* libRHSQLite */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 13CABC2917A8AF240096EE76 /* Build configuration list for PBXNativeTarget "libRHSQLite" */;
+			buildPhases = (
+				13CABC0917A8AF230096EE76 /* Sources */,
+				13CABC0A17A8AF230096EE76 /* Frameworks */,
+				13CABC6817A8B2B90096EE76 /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = libRHSQLite;
+			productName = libRHSQLite;
+			productReference = 13CABC0D17A8AF230096EE76 /* liblibRHSQLite.a */;
+			productType = "com.apple.product-type.library.static";
+		};
+		13CABC5717A8AFA90096EE76 /* RHSQLiteKitTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 13CABC6517A8AFA90096EE76 /* Build configuration list for PBXNativeTarget "RHSQLiteKitTests" */;
+			buildPhases = (
+				13CABC5417A8AFA90096EE76 /* Sources */,
+				13CABC5517A8AFA90096EE76 /* Frameworks */,
+				13CABC5617A8AFA90096EE76 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				13CABC6417A8AFA90096EE76 /* PBXTargetDependency */,
+			);
+			name = RHSQLiteKitTests;
+			productName = RHSQLiteKitTests;
+			productReference = 13CABC5817A8AFA90096EE76 /* RHSQLiteKitTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		13EEE25117A773FD00D3EA91 /* RHSQLiteKit */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 13EEE27A17A773FE00D3EA91 /* Build configuration list for PBXNativeTarget "RHSQLiteKit" */;
+			buildPhases = (
+				13EEE24D17A773FD00D3EA91 /* Sources */,
+				13EEE24E17A773FD00D3EA91 /* Frameworks */,
+				13EEE24F17A773FD00D3EA91 /* Headers */,
+				13EEE25017A773FD00D3EA91 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = RHSQLiteKit;
+			productName = RHSQLiteKit;
+			productReference = 13EEE25217A773FD00D3EA91 /* RHSQLiteKit.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		13EEE24917A773FD00D3EA91 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				CLASSPREFIX = RH;
+				LastUpgradeCheck = 0500;
+				ORGANIZATIONNAME = "Richard Heard";
+				TargetAttributes = {
+					13CABC5717A8AFA90096EE76 = {
+						TestTargetID = 13EEE25117A773FD00D3EA91;
+					};
+				};
+			};
+			buildConfigurationList = 13EEE24C17A773FD00D3EA91 /* Build configuration list for PBXProject "RHSQLiteKit" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 13EEE24817A773FD00D3EA91;
+			productRefGroup = 13EEE25317A773FD00D3EA91 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				13EEE25117A773FD00D3EA91 /* RHSQLiteKit */,
+				13CABC5717A8AFA90096EE76 /* RHSQLiteKitTests */,
+				13CABC0C17A8AF230096EE76 /* libRHSQLite */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		13CABC5617A8AFA90096EE76 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				13CABC5F17A8AFA90096EE76 /* InfoPlist.strings in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		13EEE25017A773FD00D3EA91 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		13CABC0917A8AF230096EE76 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				13FE48F417A9B6A8003C687E /* NSString+RHNumberAdditions.m in Sources */,
+				13CABC2F17A8AF590096EE76 /* RHSQLiteDataStore.m in Sources */,
+				13FE48F017A9B6A8003C687E /* NSString+RHCaseAdditions.m in Sources */,
+				13CABC3017A8AF590096EE76 /* RHSQLiteObject.m in Sources */,
+				13CABC3117A8AF590096EE76 /* RHSQLiteObjectQuery.m in Sources */,
+				13FE48EC17A9B6A8003C687E /* NSArray+RHNumberAdditions.m in Sources */,
+				13CABC3217A8AF590096EE76 /* RHSQLiteDynamicObjectParent.m in Sources */,
+				13FE48FE17A9B6A8003C687E /* RHWeakValue.m in Sources */,
+				13CABC3317A8AF590096EE76 /* RHSQLiteObjectPlaceholder.m in Sources */,
+				13CABC3417A8AF590096EE76 /* FMDatabase.m in Sources */,
+				13CABC3517A8AF590096EE76 /* FMDatabaseAdditions.m in Sources */,
+				13CABC3617A8AF590096EE76 /* FMDatabasePool.m in Sources */,
+				13CABC3717A8AF590096EE76 /* FMDatabaseQueue.m in Sources */,
+				13CABC3817A8AF590096EE76 /* FMResultSet.m in Sources */,
+				13CABC3F17A8AF590096EE76 /* RHDynamicPropertyObject.m in Sources */,
+				13FE48FA17A9B6A8003C687E /* RHLoggingSupport.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		13CABC5417A8AFA90096EE76 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				13CABC6117A8AFA90096EE76 /* RHSQLiteKitTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		13EEE24D17A773FD00D3EA91 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				13FE48F317A9B6A8003C687E /* NSString+RHNumberAdditions.m in Sources */,
+				13EEE29E17A7766500D3EA91 /* RHSQLiteObjectQuery.m in Sources */,
+				13FE48EF17A9B6A8003C687E /* NSString+RHCaseAdditions.m in Sources */,
+				13EEE29C17A7766500D3EA91 /* RHSQLiteObjectPlaceholder.m in Sources */,
+				13EEE37E17A8A40F00D3EA91 /* FMDatabase.m in Sources */,
+				13FE48EB17A9B6A8003C687E /* NSArray+RHNumberAdditions.m in Sources */,
+				13EEE29817A7766500D3EA91 /* RHSQLiteDynamicObjectParent.m in Sources */,
+				13FE48FD17A9B6A8003C687E /* RHWeakValue.m in Sources */,
+				13EEE38017A8A40F00D3EA91 /* FMDatabaseAdditions.m in Sources */,
+				13EEE38817A8A40F00D3EA91 /* FMResultSet.m in Sources */,
+				13EEE29A17A7766500D3EA91 /* RHSQLiteObject.m in Sources */,
+				13EEE38217A8A40F00D3EA91 /* FMDatabasePool.m in Sources */,
+				13EEE29617A7766500D3EA91 /* RHSQLiteDataStore.m in Sources */,
+				13EEE38417A8A40F00D3EA91 /* FMDatabaseQueue.m in Sources */,
+				13EEE36417A89EAA00D3EA91 /* RHDynamicPropertyObject.m in Sources */,
+				13FE48F917A9B6A8003C687E /* RHLoggingSupport.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		13CABC6417A8AFA90096EE76 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 13EEE25117A773FD00D3EA91 /* RHSQLiteKit */;
+			targetProxy = 13CABC6317A8AFA90096EE76 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		13CABC5D17A8AFA90096EE76 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				13CABC5E17A8AFA90096EE76 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		13CABC2A17A8AF240096EE76 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CONFIGURATION_BUILD_DIR = "$(BUILD_DIR)/$(CONFIGURATION)";
+				DSTROOT = /tmp/libRHSQLite.dst;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "RHSQLiteKit/RHSQLiteKit-Prefix.pch";
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INSTALL_PATH = /;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				OTHER_LDFLAGS = (
+					"-ObjC",
+					"-all_load",
+				);
+				PRIVATE_HEADERS_FOLDER_PATH = "$(PUBLIC_HEADERS_FOLDER_PATH)/Private";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PUBLIC_HEADERS_FOLDER_PATH = "include/$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+			};
+			name = Debug;
+		};
+		13CABC2B17A8AF240096EE76 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CONFIGURATION_BUILD_DIR = "$(BUILD_DIR)/$(CONFIGURATION)";
+				DSTROOT = /tmp/libRHSQLite.dst;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "RHSQLiteKit/RHSQLiteKit-Prefix.pch";
+				INSTALL_PATH = /;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				OTHER_LDFLAGS = (
+					"-ObjC",
+					"-all_load",
+				);
+				PRIVATE_HEADERS_FOLDER_PATH = "$(PUBLIC_HEADERS_FOLDER_PATH)/Private";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PUBLIC_HEADERS_FOLDER_PATH = "include/$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		13CABC6617A8AFA90096EE76 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+					"$(inherited)",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "RHSQLiteKitTests/RHSQLiteKitTests-Prefix.pch";
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = "RHSQLiteKitTests/RHSQLiteKitTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = xctest;
+			};
+			name = Debug;
+		};
+		13CABC6717A8AFA90096EE76 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+					"$(inherited)",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "RHSQLiteKitTests/RHSQLiteKitTests-Prefix.pch";
+				INFOPLIST_FILE = "RHSQLiteKitTests/RHSQLiteKitTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = xctest;
+			};
+			name = Release;
+		};
+		13EEE27817A773FE00D3EA91 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.9;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = macosx;
+			};
+			name = Debug;
+		};
+		13EEE27917A773FE00D3EA91 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = YES;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.9;
+				SDKROOT = macosx;
+			};
+			name = Release;
+		};
+		13EEE27B17A773FE00D3EA91 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				FRAMEWORK_VERSION = A;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "RHSQLiteKit/RHSQLiteKit-Prefix.pch";
+				HEADER_SEARCH_PATHS = "${CONFIGURATION_BUILD_DIR}/include/FMDB/**";
+				INFOPLIST_FILE = "RHSQLiteKit/RHSQLiteKit-Info.plist";
+				INSTALL_PATH = "@executable_path/../Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				VALID_ARCHS = x86_64;
+				WRAPPER_EXTENSION = framework;
+			};
+			name = Debug;
+		};
+		13EEE27C17A773FE00D3EA91 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				FRAMEWORK_VERSION = A;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "RHSQLiteKit/RHSQLiteKit-Prefix.pch";
+				INFOPLIST_FILE = "RHSQLiteKit/RHSQLiteKit-Info.plist";
+				INSTALL_PATH = "@executable_path/../Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				VALID_ARCHS = x86_64;
+				WRAPPER_EXTENSION = framework;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		13CABC2917A8AF240096EE76 /* Build configuration list for PBXNativeTarget "libRHSQLite" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				13CABC2A17A8AF240096EE76 /* Debug */,
+				13CABC2B17A8AF240096EE76 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		13CABC6517A8AFA90096EE76 /* Build configuration list for PBXNativeTarget "RHSQLiteKitTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				13CABC6617A8AFA90096EE76 /* Debug */,
+				13CABC6717A8AFA90096EE76 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		13EEE24C17A773FD00D3EA91 /* Build configuration list for PBXProject "RHSQLiteKit" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				13EEE27817A773FE00D3EA91 /* Debug */,
+				13EEE27917A773FE00D3EA91 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		13EEE27A17A773FE00D3EA91 /* Build configuration list for PBXNativeTarget "RHSQLiteKit" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				13EEE27B17A773FE00D3EA91 /* Debug */,
+				13EEE27C17A773FE00D3EA91 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 13EEE24917A773FD00D3EA91 /* Project object */;
+}
