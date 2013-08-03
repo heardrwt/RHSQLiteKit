@@ -614,7 +614,8 @@ extern id RHSQLiteObjectValueDecode(RHSQLiteDataStore *dataStore, id objectToBeD
 
 #pragma mark - dictionary representation
 -(NSString*)dictionaryKeyForColumn:(NSString*)columnName{
-    return [columnName sk_underscoreString];
+    //just passthrough. we provide this for subclasses to use as they see fit.
+    return columnName;
 }
 
 -(NSDictionary*)dictionaryRepresentation{
