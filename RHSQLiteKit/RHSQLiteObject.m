@@ -622,17 +622,17 @@ extern id RHSQLiteObjectValueDecode(RHSQLiteDataStore *dataStore, id objectToBeD
     [self load];
     NSMutableDictionary *result = [NSMutableDictionary dictionary];
     [_loadedColumnsAndValues enumerateKeysAndObjectsUsingBlock:^(id key, id obj, BOOL *stop) {
-        [result setObject:obj forKey:[self dictionaryKeyForColumn:key]];
+        [result setObject:RHSQLiteObjectValueDecode(_dataStore, obj, [self classForColumn:key]) forKey:[self dictionaryKeyForColumn:key]];
     }];
-    return [NSDictionary dictionaryWithDictionary:_loadedColumnsAndValues];
+    return [NSDictionary dictionaryWithDictionary:result];
 }
 
 -(NSDictionary*)unsavedDictionaryRepresentation{
     NSMutableDictionary *result = [NSMutableDictionary dictionary];
     [_unsavedChanges enumerateKeysAndObjectsUsingBlock:^(id key, id obj, BOOL *stop) {
-        [result setObject:obj forKey:[self dictionaryKeyForColumn:key]];
+        [result setObject:RHSQLiteObjectValueDecode(_dataStore, obj, [self classForColumn:key]) forKey:[self dictionaryKeyForColumn:key]];
     }];
-    return [NSDictionary dictionaryWithDictionary:_loadedColumnsAndValues];
+    return [NSDictionary dictionaryWithDictionary:result];
 }
 
 
@@ -759,6 +759,11 @@ id RHSQLiteObjectValueEncode(RHSQLiteDataStore *dataStore, id objectToBeEncoded)
 
 id RHSQLiteObjectValueDecode(RHSQLiteDataStore *dataStore, id objectToBeDecoded, Class expectedClass){
     
+    //if the object is already of the expected class, return early.
+    if ([objectToBeDecoded isKindOfClass:expectedClass]){
+        return objectToBeDecoded;
+    }
+    
     //NSNumber to NSDate
     if ([expectedClass isSubclassOfClass:[NSDate class]] && [objectToBeDecoded isKindOfClass:[NSNumber class]]){
         RHLog(@"Decoding NSNumber -> NSDate using dateWithTimeIntervalSince1970.");
@@ -783,7 +788,9 @@ id RHSQLiteObjectValueDecode(RHSQLiteDataStore *dataStore, id objectToBeDecoded,
         }
     }
     
+    
     //default to passthrough
+    RHErrorLog(@"Error: Unable to transform object of class %@ into expected class %@. Returning as is.", NSStringFromClass([objectToBeDecoded class]), NSStringFromClass(expectedClass));
     return objectToBeDecoded;
 }
 
