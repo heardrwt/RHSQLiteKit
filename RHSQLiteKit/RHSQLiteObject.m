@@ -418,6 +418,9 @@ extern id RHSQLiteObjectValueDecode(RHSQLiteDataStore *dataStore, id objectToBeD
 -(NSString*)columnNameForProperty:(NSString*)propertyName{
     NSString *columnName = [propertyName sk_underscoreString];
     
+    //special case our objectID - id conversion
+    if ([columnName isEqualToString:@"object_i_d"]) columnName = @"id";
+    
     //special cases for things that are usually all Caps
     columnName = [columnName stringByReplacingOccurrencesOfString:@"_i_d" withString:@"_id"];
     columnName = [columnName stringByReplacingOccurrencesOfString:@"_u_r_l" withString:@"_url"];
@@ -433,6 +436,9 @@ extern id RHSQLiteObjectValueDecode(RHSQLiteDataStore *dataStore, id objectToBeD
         RHErrorLog(@"Warning: Asking for property name for unknown column name: %@.", columnName);
     }
      NSString *propertyName = [columnName sk_camelcaseString];
+    
+    //special case our objectID - id conversion
+    if ([propertyName isEqualToString:@"id"]) propertyName = @"objectID";
     
     //special cases for things that are usually all caps
     propertyName = [propertyName stringByReplacingOccurrencesOfString:@"Id" withString:@"ID"];
