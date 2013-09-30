@@ -42,20 +42,37 @@
     return new;
 }
 
++(id)queryForObjectClass:(Class)objClass withCustomSQL:(NSString*)customSQL{
+    RHSQLiteObjectQuery *new = [[self alloc] init];
+    new.objectClass = objClass;
+    [new setCustomSQL:customSQL];
+    return new;
+    
+}
+
+
 -(void)setWhere:(NSString*)whereSQL{
-    _where = whereSQL;
+    _where = [whereSQL copy];
 }
 
 -(void)setOrderedBy:(NSString*)columnName ascending:(BOOL)ascending{
-    _orderedBy = [NSString stringWithFormat:@" ORDER BY %@ %@", columnName, ascending ? @"ASC" : @"DESC"];
+    _orderedBy = [NSString stringWithFormat:@" ORDER BY `%@` %@", columnName, ascending ? @"ASC" : @"DESC"];
+}
+
+-(void)setCustomSQL:(NSString*)customSQL{
+    NSString *tableName = [_objectClass tableName];
+    NSString *primaryKeyName = [_objectClass primaryKeyName];
+    _customSQL = [customSQL stringByReplacingOccurrencesOfString:@"SELECT " withString:[NSString stringWithFormat:@"SELECT `%@`.`%@` as '%@', ", tableName, primaryKeyName, primaryKeyName] options:NSCaseInsensitiveSearch|NSAnchoredSearch range:NSMakeRange(0, customSQL.length)];
 }
 
 -(NSString*)sql{
+    if (_customSQL) return _customSQL;
+    
     NSString *tableName = [_objectClass tableName];
     NSString *primaryKeyName = [_objectClass primaryKeyName];
 
     NSString *orderBy = _orderedBy ?: @"";
-    return [NSString stringWithFormat:@"SELECT _ROWID_ as _ROWID_, %@ FROM '%@' WHERE %@ %@;", primaryKeyName, tableName, _where, orderBy];
+    return [NSString stringWithFormat:@"SELECT `%@` as '%@' FROM `%@` WHERE %@ %@;", primaryKeyName, primaryKeyName, tableName, _where, orderBy];
 }
 
 #pragma mark - description

@@ -39,6 +39,8 @@
     Class _objectClass;
     NSString *_where;
     NSString *_orderedBy;
+    
+    NSString *_customSQL;
 }
 
 /*!
@@ -51,6 +53,15 @@
  @returns The newly instantiated RHSQLiteQuery object.
  */
 +(id)queryForObjectClass:(Class)objClass where:(NSString*)where orderedBy:(NSString*)columnName ascending:(BOOL)ascending;
+
+/*!
+ @method +(id)queryForObjectClass:withCustomSQL:
+ @abstract Initialises a new query instance with a custom sql string
+ @param objClass They kind of RHSQLiteObject subclass what you want returned by the query. (+[RHSQLiteObject tableName] is used internally)
+ @param customSQL A valid SQL statement that includes the [objClass primaryKeyName] in the SELECT statement (added automatically if not present).
+ @returns The newly instantiated RHSQLiteQuery object.
+ */
++(id)queryForObjectClass:(Class)objClass withCustomSQL:(NSString*)customSQL;
 
 
 /*!
@@ -75,9 +86,16 @@
 -(void)setOrderedBy:(NSString*)columnName ascending:(BOOL)ascending;
 
 /*!
+ @method setCustomSQL
+ @abstract Set a custom SQL string for this query.
+ @param customSQL A valid SQL statement that includes the [objClass primaryKeyName] in the SELECT statement (added automatically if not present).
+ */
+-(void)setCustomSQL:(NSString*)customSQL;
+
+/*!
  @method sql
- @abstract Access the generated SQL query for the instances specified params.
- @returns Generated SQL query of the form "SELECT * FROM {tableName} WHERE {where} ORDER BY {orderedBy} {ASC/DESC};"
+ @abstract Access the generated SQL query for the instances specified params, or customSQL.
+ @returns Generated SQL query of the form "SELECT * FROM {tableName} WHERE {where} ORDER BY {orderedBy} {ASC/DESC};" or _customSQL
  */
 -(NSString*)sql;
 
