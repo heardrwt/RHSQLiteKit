@@ -33,7 +33,7 @@
 /*!
  @class RHSQLiteObjectQuery
  @abstract RHSQLiteObjectQuery represents the various parts of an SQL query.
- @discussion The generated SQL from this class takes the form "SELECT * FROM {tableName} WHERE {where} ORDERED BY {orderedBy} {ASC/DESC};"
+ @discussion The generated SQL from this class takes the form "SELECT * FROM {tableName} WHERE {where} ORDER BY {orderedBy} {ASC/DESC};"
  */
 @interface RHSQLiteObjectQuery : NSObject {
     Class _objectClass;
@@ -77,7 +77,7 @@
 /*!
  @method sql
  @abstract Access the generated SQL query for the instances specified params.
- @returns Generated SQL query of the form "SELECT * FROM {tableName} WHERE {where} ORDERED BY {orderedBy} {ASC/DESC};"
+ @returns Generated SQL query of the form "SELECT * FROM {tableName} WHERE {where} ORDER BY {orderedBy} {ASC/DESC};"
  */
 -(NSString*)sql;
 

@@ -441,7 +441,7 @@ extern id RHSQLiteObjectValueDecode(RHSQLiteDataStore *dataStore, id objectToBeD
     if ([propertyName isEqualToString:@"id"]) propertyName = @"objectID";
     
     //special cases for things that are usually all caps
-    propertyName = [propertyName stringByReplacingOccurrencesOfString:@"Id" withString:@"ID"];
+    propertyName = [propertyName hasSuffix:@"Id"] ? [propertyName stringByReplacingOccurrencesOfString:@"Id" withString:@"ID"] : propertyName;
     propertyName = [propertyName stringByReplacingOccurrencesOfString:@"Url" withString:@"URL"];
     
     return propertyName;
@@ -758,6 +758,11 @@ id RHSQLiteObjectValueEncode(RHSQLiteDataStore *dataStore, id objectToBeEncoded)
 }
 
 id RHSQLiteObjectValueDecode(RHSQLiteDataStore *dataStore, id objectToBeDecoded, Class expectedClass){
+        
+    //nothing can really be gleamed from nil, so just pass through
+    if (!objectToBeDecoded || objectToBeDecoded == [NSNull null]){
+        return nil;
+    }
     
     //if the object is already of the expected class, return early.
     if ([objectToBeDecoded isKindOfClass:expectedClass]){

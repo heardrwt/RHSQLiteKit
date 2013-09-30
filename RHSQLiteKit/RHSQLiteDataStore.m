@@ -591,7 +591,7 @@
 //used to implement the weak linking cache
 -(void)_objectCheckIn:(RHSQLiteObject*)object{
     if (!object) return;
-    RHLog(@"Checking in object: <%@: %p> with ID %llu", NSStringFromClass(object.class), object, object.objectID);
+    //RHLog(@"Checking in object: <%@: %p> with ID %llu", NSStringFromClass(object.class), object, object.objectID);
 
     RHSQLiteObject *strongObject = object; //keep it around for a while
     
@@ -608,7 +608,7 @@
     //called from inside RHSQLiteObject's dealloc method, so not safe to use any instance variables implemented above RHSQLiteObject.
     if (!object) return;
     
-    RHLog(@"Checking out object: <%@: %p> with ID %llu", NSStringFromClass(object.class), object, object.objectID);
+    //RHLog(@"Checking out object: <%@: %p> with ID %llu", NSStringFromClass(object.class), object, object.objectID);
 
     __unsafe_unretained __block RHSQLiteObject *safeObject = object;
     

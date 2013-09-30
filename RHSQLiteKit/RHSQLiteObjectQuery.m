@@ -47,7 +47,7 @@
 }
 
 -(void)setOrderedBy:(NSString*)columnName ascending:(BOOL)ascending{
-    _orderedBy = [NSString stringWithFormat:@" ORDERED BY %@ %@", columnName, ascending ? @"ASC" : @"DESC"];
+    _orderedBy = [NSString stringWithFormat:@" ORDER BY %@ %@", columnName, ascending ? @"ASC" : @"DESC"];
 }
 
 -(NSString*)sql{
@@ -55,7 +55,7 @@
     NSString *primaryKeyName = [_objectClass primaryKeyName];
 
     NSString *orderBy = _orderedBy ?: @"";
-    return [NSString stringWithFormat:@"SELECT %@ FROM '%@' WHERE %@ %@;", primaryKeyName, tableName, _where, orderBy];
+    return [NSString stringWithFormat:@"SELECT _ROWID_ as _ROWID_, %@ FROM '%@' WHERE %@ %@;", primaryKeyName, tableName, _where, orderBy];
 }
 
 #pragma mark - description
