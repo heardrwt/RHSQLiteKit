@@ -61,6 +61,7 @@
 
     //cache
     NSMutableDictionary *_perTableWeakObjectCaches; //each table has an entry in the top level dictionary. Caution: Each sub dictionary's values are RHWeakValue objects, weakly wrapping underlying RHSQLiteObject subclasses
+    NSMutableDictionary *_cachedTableColumnNames; //for speed
 
 }
 
@@ -124,7 +125,7 @@
 -(RHSQLiteObject*)objectFromTable:(NSString*)tableName withID:(RHSQLiteObjectID)objectID; //entries are created on the fly from sqlite, therefore this will likely return a new object on each call
 -(NSArray*)objectsFromTable:(NSString*)tableName withIDs:(NSArray*)objectIDs;
 
--(NSArray*)objectsMatchingQuery:(RHSQLiteObjectQuery*)query;  //array of NSNumbers
+-(NSArray*)objectsMatchingQuery:(RHSQLiteObjectQuery*)query;
 -(NSArray*)objectsFromTable:(NSString*)tableName where:(NSString*)where orderedBy:(NSString*)columnName ascending:(BOOL)ascending;
 
 -(NSArray*)objectIDsMatchingQuery:(RHSQLiteObjectQuery*)query; //array of NSNumbers

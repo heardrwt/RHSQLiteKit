@@ -255,7 +255,7 @@ extern id RHSQLiteObjectValueDecode(RHSQLiteDataStore *dataStore, id objectToBeD
     result = RHSQLiteObjectValueDecode(_dataStore, [_loadedColumnsAndValues objectForKey:columnName], [self classForColumn:columnName]);
     if (result) return result;
     
-    RHLog(@"Failed to find value for columnName %@", columnName);
+    //RHLog(@"Failed to find value for columnName %@", columnName);
     return nil;
 }
 

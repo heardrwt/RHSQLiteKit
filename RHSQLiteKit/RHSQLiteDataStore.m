@@ -60,7 +60,16 @@
 //private stuff
 -(void)_populateKnownTableNames;
 -(void)_loadDefaultTableClassAssociations;
++(NSString*)_defaultClassNameForTable:(NSString*)tableName;
+
+//migrations
+-(NSUInteger)_currentSchemaVersion;
+-(NSUInteger)_maxSchemaVersion;
 -(BOOL)_performRequiredMigrations;
+-(BOOL)_performMigrationToSchemaVersion:(NSUInteger)version;
+
+//cached
+-(void)_invalidateCachedColumnNamesForTable:(NSString*)tableName;
 
 //metadata
 -(BOOL)_metadataTableExists;
@@ -93,7 +102,7 @@
         _associatedClassNamesByTableName = [[NSMutableDictionary alloc] init];
         _registeredMigrationPaths = [[NSMutableArray alloc] init];
         _perTableWeakObjectCaches = [[NSMutableDictionary alloc] init];
-        
+        _cachedTableColumnNames = [[NSMutableDictionary alloc] init];
         //some defaults
         _loaded = NO;
         
@@ -440,6 +449,9 @@
 
 #pragma mark - generic db type info
 -(NSArray*)columnNamesForTable:(NSString*)tableName{
+    NSArray* columnNames = [_cachedTableColumnNames objectForKey:tableName];
+    if (columnNames) return columnNames;
+    
     NSMutableArray *result = [NSMutableArray array];
     [self accessDatabase:^(FMDatabase *db) {
         NSString *sql = [NSString stringWithFormat:@"PRAGMA table_info(`%@`)", tableName];
@@ -450,7 +462,14 @@
         }
         [resultSet close];
     }];
-    return [NSArray arrayWithArray:result];
+    
+    result = [NSArray arrayWithArray:result];
+    [_cachedTableColumnNames setObject:result forKey:tableName];
+    return result;
+}
+
+-(void)_invalidateCachedColumnNamesForTable:(NSString*)tableName{
+    [_cachedTableColumnNames removeObjectForKey:tableName];
 }
 
 -(NSString*)columnTypeForTable:(NSString*)tableName andColumn:(NSString*)columnName{
@@ -523,6 +542,7 @@
         result = [db executeUpdate:sql];
     }];
     RHLog(@"Creating metadata column %@. Result:%i.", columnName, result);
+    [self _invalidateCachedColumnNamesForTable:RHSQLiteDataStoreMetadataTableName];
     return result;
 }
 
