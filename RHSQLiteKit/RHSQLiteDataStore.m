@@ -452,20 +452,20 @@
     NSArray* columnNames = [_cachedTableColumnNames objectForKey:tableName];
     if (columnNames) return columnNames;
     
-    NSMutableArray *result = [NSMutableArray array];
+    NSMutableArray *mutableResults = [NSMutableArray array];
     [self accessDatabase:^(FMDatabase *db) {
         NSString *sql = [NSString stringWithFormat:@"PRAGMA table_info(`%@`)", tableName];
         FMResultSet *resultSet = [db executeQuery:sql];
         while ([resultSet next]) {
             NSString *name = [resultSet stringForColumn:@"name"];
-            if (name) [result addObject:name];
+            if (name) [mutableResults addObject:name];
         }
         [resultSet close];
     }];
     
-    result = [NSArray arrayWithArray:result];
-    [_cachedTableColumnNames setObject:result forKey:tableName];
-    return result;
+    NSArray *results = [NSArray arrayWithArray:mutableResults];
+    [_cachedTableColumnNames setObject:results forKey:tableName];
+    return results;
 }
 
 -(void)_invalidateCachedColumnNamesForTable:(NSString*)tableName{
