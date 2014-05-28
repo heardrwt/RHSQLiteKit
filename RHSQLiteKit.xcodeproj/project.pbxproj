@@ -98,7 +98,7 @@
 /* Begin PBXFileReference section */
 		13CABBE517A8AB970096EE76 /* libsqlite3.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libsqlite3.dylib; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS7.0.sdk/usr/lib/libsqlite3.dylib; sourceTree = DEVELOPER_DIR; };
 		13CABC0D17A8AF230096EE76 /* liblibRHSQLite.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = liblibRHSQLite.a; sourceTree = BUILT_PRODUCTS_DIR; };
-		13CABC5817A8AFA90096EE76 /* RHSQLiteKitTests.xctest */ = {isa = PBXFileReference; explicitFileType = folder; includeInIndex = 0; path = RHSQLiteKitTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		13CABC5817A8AFA90096EE76 /* RHSQLiteKitTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = RHSQLiteKitTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		13CABC5C17A8AFA90096EE76 /* RHSQLiteKitTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "RHSQLiteKitTests-Info.plist"; sourceTree = "<group>"; };
 		13CABC5E17A8AFA90096EE76 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		13CABC6017A8AFA90096EE76 /* RHSQLiteKitTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RHSQLiteKitTests.m; sourceTree = "<group>"; };
@@ -454,7 +454,7 @@
 			isa = PBXProject;
 			attributes = {
 				CLASSPREFIX = RH;
-				LastUpgradeCheck = 0500;
+				LastUpgradeCheck = 0510;
 				ORGANIZATIONNAME = "Richard Heard";
 				TargetAttributes = {
 					13CABC5717A8AFA90096EE76 = {
@@ -626,6 +626,7 @@
 		13CABC6617A8AFA90096EE76 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(DEVELOPER_FRAMEWORKS_DIR)",
 					"$(inherited)",
@@ -645,6 +646,7 @@
 		13CABC6717A8AFA90096EE76 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(DEVELOPER_FRAMEWORKS_DIR)",
 					"$(inherited)",
